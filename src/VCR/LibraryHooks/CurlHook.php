@@ -116,6 +116,7 @@ class CurlHook implements LibraryHook
             return;
         }
 
+        $this->processor->restore();
         self::$requestCallback = null;
 
         static::$status = self::DISABLED;

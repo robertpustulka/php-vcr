@@ -117,6 +117,7 @@ class SoapHook implements LibraryHook
             return;
         }
 
+        $this->processor->restore();
         self::$requestCallback = null;
 
         $this->status = self::DISABLED;
